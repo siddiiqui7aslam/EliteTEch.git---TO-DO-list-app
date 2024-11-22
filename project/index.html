@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Auth Section -->
+      <div id="authSection" class="auth-section">
+        <h1>Chat App</h1>
+        <div class="auth-form">
+          <input type="email" id="email" placeholder="Email" />
+          <input type="password" id="password" placeholder="Password" />
+          <button onclick="login()">Login</button>
+          <button onclick="register()">Register</button>
+        </div>
+      </div>
+
+      <!-- Chat Section -->
+      <div id="chatSection" class="chat-section hidden">
+        <div class="sidebar">
+          <div class="user-info">
+            <span id="userEmail"></span>
+            <button onclick="logout()">Logout</button>
+          </div>
+          <div class="chat-list">
+            <h3>Chats</h3>
+            <button onclick="createGroup()">New Group</button>
+            <div id="chatList"></div>
+          </div>
+        </div>
+        
+        <div class="chat-area">
+          <div id="messages" class="messages"></div>
+          <div class="input-area">
+            <input type="file" id="fileInput" accept="image/*" />
+            <input type="text" id="messageInput" placeholder="Type a message..." />
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
